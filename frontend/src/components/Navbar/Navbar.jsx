@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom'
 const Navbar = () => {
     return (
         <nav className="navbar bg-white">
-            <div className="navbar-wrapper mx-auto px-28 flex items-center justify-between h-16">
+            <div className="navbar-wrapper max-w-[1536px] mx-auto px-28 flex items-center justify-between h-16">
                 <div className="logo flex-shrink-0">
-                    <h1 className='font-poppins font-black text-2xl text-primary cursor-pointer'>TechBlog</h1>
+                    <h1 className='font-poppins font-black text-3xl text-primary cursor-pointer'>TechBlog</h1>
                 </div>
 
                 <div className="menu font-poppins">
