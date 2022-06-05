@@ -1,5 +1,7 @@
 import React from 'react';
 import ArticleSlider from '../../components/ArticleSlider/ArticleSlider';
+import Subscribe from '../../components/Subscribe/Subscribe';
+import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 
 const Home = () => {
     return (
@@ -17,7 +19,7 @@ const Home = () => {
                         <div className="hero-text-area">
                             <h1 className='font-poppins text-6xl font-black text-fontColor leading-[1.3] mb-4'>Enhance your <br /> knowledge</h1>
                             <p className='font-poppins font-medium text-base mb-4 text-fontColor leading-[1.3]'>Follow us to stay updated with technology <br /> and grow your technical knowledge.</p>
-                            <button className='bg-primary rounded-md w-44 h-12 text-lg font-semibold text-white shadow-[0px_5px_8px_1px_rgba(255,63,89,0.3)] hover:bg-[#ff667a] transition-all ease-in-out delay-150'>Find Out More</button>
+                            <PrimaryButton width="44" height="12" buttonName="Find Out More" />
                         </div>
                     </div>
 
@@ -31,11 +33,15 @@ const Home = () => {
             </section>
 
             <section className='featured_articles-section'>
-                <ArticleSlider heading="Featured Articles" sliderClass="featuredItem" sliderId="featuredSlider"/>
+                <ArticleSlider heading="Featured Articles" sliderClass="featuredItem" sliderId="featuredSlider" />
             </section>
 
             <section className='populer_articles-section'>
-                <ArticleSlider heading="Populer Articles" sliderClass="populerItem" sliderId="populerSlider"/>
+                <ArticleSlider heading="Populer Articles" sliderClass="populerItem" sliderId="populerSlider" />
+            </section>
+
+            <section className='subscribe-section'>
+                <Subscribe />
             </section>
         </>
     );

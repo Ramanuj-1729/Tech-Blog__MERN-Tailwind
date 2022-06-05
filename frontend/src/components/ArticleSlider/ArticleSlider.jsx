@@ -50,15 +50,16 @@ const ArticleSlider = (props) => {
                     </div>
                 </div>
 
-                <div className="btns my-6 flex items-center justify-center space-x-4">
-                    <button onClick={prev} className='w-8 h-8 border-solid border-2 border-gray2 rounded-full'><i className="fa-solid fa-angle-left"></i></button>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <button onClick={next} className='w-8 h-8 border-solid border-2 border-gray2 rounded-full'><i className="fa-solid fa-angle-right"></i></button>
+                <div className="btns my-6 flex items-center justify-center space-x-3">
+                    <button onClick={prev} className='w-8 h-8 border-solid border-2 text-gray3 border-gray3 rounded-full'><i className="fa-solid fa-angle-left"></i></button>
+                    <span className='w-5 h-1 bg-gray2 rounded-xl'></span>
+                    <span className='w-5 h-1 bg-gray2 rounded-xl'></span>
+                    <span className='w-5 h-1 bg-gray2 rounded-xl'></span>
+                    <span className='w-5 h-1 bg-gray2 rounded-xl'></span>
+                    <span className='w-5 h-1 bg-gray2 rounded-xl'></span>
+                    <span className='w-5 h-1 bg-gray2 rounded-xl'></span>
+                    <span className='w-5 h-1 bg-gray2 rounded-xl'></span>
+                    <button onClick={next} className='w-8 h-8 border-solid border-2 text-gray3 border-gray3 rounded-full'><i className="fa-solid fa-angle-right"></i></button>
                 </div>
             </div>
         </>
