@@ -30,11 +30,12 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className='featured_articles-section mt-12'>
-                <div className="featured_articles-wrapper w-full flex items-center justify-center flex-col">
-                    <h1 className='font-poppins text-4xl font-medium text-fontColor leading-[1.5] mb-8'>Featured Articles</h1>
-                    <ArticleSlider />
-                </div>
+            <section className='featured_articles-section'>
+                <ArticleSlider heading="Featured Articles" sliderClass="featuredItem" sliderId="featuredSlider"/>
+            </section>
+
+            <section className='populer_articles-section'>
+                <ArticleSlider heading="Populer Articles" sliderClass="populerItem" sliderId="populerSlider"/>
             </section>
         </>
     );
