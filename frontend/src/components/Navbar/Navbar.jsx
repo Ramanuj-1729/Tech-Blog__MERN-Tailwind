@@ -18,7 +18,7 @@ const Navbar = () => {
         <nav className={`navbar sticky top-0 z-10 bg-white ${shadow === true ? "drop-shadow-xl" : ""} transition duration-300 ease-out`}>
             <div className="navbar-wrapper max-w-[1536px] mx-auto px-28 flex items-center justify-between h-16">
                 <div className="logo flex-shrink-0">
-                    <h1 className='font-poppins font-black text-3xl text-primary cursor-pointer'>TechBlog</h1>
+                    <NavLink to="/"><h1 className='font-poppins font-black text-3xl text-primary cursor-pointer'>TechBlog</h1></NavLink>
                 </div>
 
                 <div className="menu font-poppins">
