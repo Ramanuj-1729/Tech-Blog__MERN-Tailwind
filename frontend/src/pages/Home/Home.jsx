@@ -2,6 +2,7 @@ import React from 'react';
 import ArticleSlider from '../../components/ArticleSlider/ArticleSlider';
 import Subscribe from '../../components/Subscribe/Subscribe';
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
+import postsData from '../../components/PostsData';
 
 const Home = () => {
     return (
@@ -33,11 +34,11 @@ const Home = () => {
             </section>
 
             <section className='featured_articles-section'>
-                <ArticleSlider heading="Featured Articles" sliderClass="featuredItem" sliderId="featuredSlider" />
+                <ArticleSlider heading="Featured Articles" sliderClass="featuredItem" sliderId="featuredSlider" postsData={postsData} />
             </section>
 
             <section className='populer_articles-section'>
-                <ArticleSlider heading="Populer Articles" sliderClass="populerItem" sliderId="populerSlider" />
+                <ArticleSlider heading="Populer Articles" sliderClass="populerItem" sliderId="populerSlider" postsData={postsData} />
             </section>
 
             <section className='subscribe-section'>
