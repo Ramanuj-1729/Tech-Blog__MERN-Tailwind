@@ -19,7 +19,7 @@ const ContactUs = () => {
         <div className="social-media-links font-semibold text-base text-fontColor font-poppins flex items-center justify-center space-x-40 my-3">
           <NavLink to="#">
             <div className="email-link space-x-4">
-              <span className='text-primary'><i class="fa-solid fa-at"></i></span>
+              <span className='text-primary'><i className="fa-solid fa-at"></i></span>
               <span>contact@techblog.com</span>
             </div>
           </NavLink>
