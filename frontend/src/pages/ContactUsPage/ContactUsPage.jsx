@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import ContactForm from '../../components/ContactForm/ContactForm';
 
-const ContactUs = () => {
+const ContactUsPage = () => {
   return (
     <>
       <div className="contactUs-wrapper flex items-center justify-center flex-col">
@@ -41,4 +41,4 @@ const ContactUs = () => {
   );
 }
 
-export default ContactUs;
+export default ContactUsPage;

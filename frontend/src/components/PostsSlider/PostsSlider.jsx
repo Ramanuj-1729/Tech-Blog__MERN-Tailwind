@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 
-const ArticleSlider = ({ heading, sliderClass, sliderId, postsData }) => {
+const PostsSlider = ({ heading, sliderClass, sliderId, postsData }) => {
     const [posts, setPosts] = useState(postsData);
     const prev = () => {
         let items = document.getElementsByClassName(sliderClass);
@@ -58,4 +58,4 @@ const ArticleSlider = ({ heading, sliderClass, sliderId, postsData }) => {
     );
 }
 
-export default ArticleSlider;
+export default PostsSlider;

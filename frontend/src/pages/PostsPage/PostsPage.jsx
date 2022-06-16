@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Pagination from '../../components/Pagination/Pagination';
 import Posts from '../../components/Posts/Posts';
 
-const Articles = () => {
+const PostsPage = () => {
     const [showPerPage, setShowPerPage] = useState(6)
     const [pagination, setPagination] = useState({
         start: 0,
@@ -14,7 +14,7 @@ const Articles = () => {
     return (
         <>
             <div className="article-wrapper flex items-center justify-center flex-col w-fit mx-auto">
-                <h1 className='font-poppins block mx-auto text-5xl font-medium text-fontColor my-5'>All Articles</h1>
+                <h1 className='font-poppins block mx-auto text-5xl font-medium text-fontColor my-5'>All Posts</h1>
                 <div className="posts-wrapper">
                     <Posts start={pagination.start} end={pagination.end} />
                 </div>
@@ -27,4 +27,4 @@ const Articles = () => {
     );
 }
 
-export default Articles;
+export default PostsPage;

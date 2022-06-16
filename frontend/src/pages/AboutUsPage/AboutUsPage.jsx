@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 
-const AboutUs = () => {
+const AboutUsPage = () => {
     const [display, setDisplay] = useState(true);
 
     const changeDisplay = () => {
@@ -33,4 +33,4 @@ const AboutUs = () => {
     );
 }
 
-export default AboutUs;
+export default AboutUsPage;

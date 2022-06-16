@@ -1,11 +1,12 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
+import Home from "./pages/HomePage/HomePage";
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import Articles from './pages/Articles/Articles';
-import About from './pages/AboutUs/AboutUs';
-import Contact from './pages/ContactUs/ContactUs';
+import Posts from './pages/PostsPage/PostsPage';
+import About from './pages/AboutUsPage/AboutUsPage';
+import Contact from './pages/ContactUsPage/ContactUsPage';
+import SingleArticlePage from './pages/SingleArticlePage/SingleArticlePage';
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/articles" element={<Articles />} />
+        <Route path="/posts" element={<Posts />} />
+        <Route path="/posts/article" element={<SingleArticlePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
