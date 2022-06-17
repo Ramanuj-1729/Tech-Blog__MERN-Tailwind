@@ -28,7 +28,7 @@ const Navbar = () => {
                     <ul className="flex space-x-10 items-center">
                         <li><NavLink to="/" className={`hover:text-primary px-1 pb-4 text-sm font-semibold transition-all ease-in-out delay-150 hover:border-b-2 border-primary ${path === "/" ? active : ""}`}>Home</NavLink></li>
 
-                        <li><NavLink to="/posts" className={`text-fontColor hover:text-primary px-1 pb-4 text-sm font-semibold transition-all hover:border-b-2 ease-in-out delay-150 border-primary ${path === "/posts" ? active : ""}`}>Posts</NavLink></li>
+                        <li><NavLink to="/posts" className={`text-fontColor hover:text-primary px-1 pb-4 text-sm font-semibold transition-all hover:border-b-2 ease-in-out delay-150 border-primary ${path === "/posts" || path === "/posts/article" ? active : ""}`}>Posts</NavLink></li>
 
                         <li><NavLink to="#" className={`text-fontColor hover:text-primary px-1 pb-4 text-sm font-semibold transition-all hover:border-b-2 ease-in-out delay-150 border-primary ${path === "/category" ? active : ""}`}>Category</NavLink></li>
 

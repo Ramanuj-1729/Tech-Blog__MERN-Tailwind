@@ -6,15 +6,17 @@ import CommentSection from '../../components/CommentSection/CommentSection';
 const SingleArticlePage = () => {
     return (
         <>
-            <section className="article">
-                <Article />
-            </section>
-            <section className="comment-and-rate">
-                <CommentAndRate />
-            </section>
-            <section className="comment-section">
-                <CommentSection />
-            </section>
+            <main className='w-1/2 mx-auto my-12 space-y-8'>
+                <section className="article">
+                    <Article />
+                </section>
+                <section className="comment-and-rate">
+                    <CommentAndRate />
+                </section>
+                <section className="comment-section">
+                    <CommentSection />
+                </section>
+            </main>
         </>
     );
 }

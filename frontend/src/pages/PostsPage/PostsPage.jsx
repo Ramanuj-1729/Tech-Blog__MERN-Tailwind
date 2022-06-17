@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Pagination from '../../components/Pagination/Pagination';
 import Posts from '../../components/Posts/Posts';
+import Underline from '../../components/shared/Underline/Underline';
 
 const PostsPage = () => {
     const [showPerPage, setShowPerPage] = useState(6)
@@ -18,7 +19,7 @@ const PostsPage = () => {
                 <div className="posts-wrapper">
                     <Posts start={pagination.start} end={pagination.end} />
                 </div>
-                <div className="underline bg-gray1 w-full h-[2px] my-8"></div>
+                <Underline marginY="8"/>
                 <div className="pagination">
                     <Pagination showPerPage={showPerPage} onPaginationChange={onPaginationChange} />
                 </div>
