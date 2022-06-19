@@ -1,7 +1,7 @@
 import React from 'react';
 import PostsSlider from '../../components/PostsSlider/PostsSlider';
 import Subscribe from '../../components/Subscribe/Subscribe';
-import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
+import PrimaryButton from '../../components/shared/PrimaryButton/PrimaryButton';
 import postsData from '../../components/PostsData';
 
 const HomePage = () => {

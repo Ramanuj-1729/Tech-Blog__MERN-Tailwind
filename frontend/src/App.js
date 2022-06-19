@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/HomePage/HomePage";
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import Navbar from './components/shared/Navbar/Navbar';
+import Footer from './components/shared/Footer/Footer';
 import Posts from './pages/PostsPage/PostsPage';
 import About from './pages/AboutUsPage/AboutUsPage';
 import Contact from './pages/ContactUsPage/ContactUsPage';

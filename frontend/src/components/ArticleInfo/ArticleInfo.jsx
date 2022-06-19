@@ -1,4 +1,5 @@
 import React from 'react';
+import StarRating from '../shared/StarRating/StarRating';
 import Undeline from '../shared/Underline/Underline';
 
 const ArticleInfo = () => {
@@ -8,12 +9,8 @@ const ArticleInfo = () => {
                 <span className="auther-name font-poppins text-base font-normal text-fontColor px-2 border-r-2 border-gray2">By <b>Ramanuj</b></span>
                 <span className="article-publish-date font-poppins text-base font-normal text-fontColor px-2 border-r-2 border-gray2">July 31, 2022</span>
                 <div className="ratings flex items-center justify-center">
-                    <span className="stars text-fontColor text-sm space-x-1 px-2 flex items-center justify-center">
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star"></i>
-                        <i className="fa-solid fa-star text-gray2"></i>
-                        <i className="fa-solid fa-star text-gray2"></i>
+                    <span className="stars space-x-1 px-2 flex items-center justify-center">
+                        <StarRating />
                     </span>
                     <span className="count font-poppins text-base font-normal text-fontColor">300</span>
                 </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
+import PrimaryButton from '../../components/shared/PrimaryButton/PrimaryButton';
 
 const AboutUsPage = () => {
     const [display, setDisplay] = useState(true);
