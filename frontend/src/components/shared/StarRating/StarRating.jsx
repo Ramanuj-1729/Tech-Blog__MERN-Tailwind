@@ -8,12 +8,14 @@ const StarRating = () => {
             {[...Array(5)].map((star, index) => {
                 index += 1;
                 return (
-                    <button type="button" key={index} className={`${index <= (hover || rating) ? "text-fontColor" : "text-gray2"}`} onClick={() => setRating(index)} onMouseEnter={() => setHover(index)} onMouseLeave={() => setHover(rating)} >
+                    <button type="button" key={index} className={`${index <= (hover || rating) ? "text-fontColor" : "text-gray2"}`} onClick={() => setRating(index)} onMouseEnter={() => setHover(index)} onMouseLeave={() => setHover(rating)} onDoubleClick={() => {setRating(0); setHover(0);}} >
                         <i className="fa-solid fa-star mr-1 text-sm"></i>
                     </button>
                 );
             })}
         </div>
+
+        
     );
 };
 

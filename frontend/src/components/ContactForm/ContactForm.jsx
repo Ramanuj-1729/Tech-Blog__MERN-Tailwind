@@ -19,6 +19,7 @@ const ContactForm = () => {
                         <textarea className='border-none outline-none w-96' name="message" cols="40" rows="6" placeholder='Message'></textarea>
                     </div>
                 </div>
+                
                 <div className="form-button relative float-right my-8">
                     <PrimaryButton width="44" height="12" buttonName="Send Message" />
                 </div>

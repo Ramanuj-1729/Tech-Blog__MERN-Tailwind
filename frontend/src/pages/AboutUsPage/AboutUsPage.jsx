@@ -9,6 +9,7 @@ const AboutUsPage = () => {
     }
 
     return (
+
         <>
             <div className="aboutUs-wrapper">
                 <div className={`aboutUs-main mx-auto mb-6 w-8/12 ${display === true ? "flex" : "hidden"} items-center justify-center space-x-10`}>

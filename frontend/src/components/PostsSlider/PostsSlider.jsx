@@ -47,7 +47,7 @@ const PostsSlider = ({ heading, sliderClass, sliderId, postsData }) => {
                     <span className='w-5 h-1 bg-gray2 rounded-xl'></span>
                     <span className='w-5 h-1 bg-gray2 rounded-xl'></span>
                     <span className='w-5 h-1 bg-gray2 rounded-xl'></span>
-                    <span className='w-5 h-1 bg-gray2 rounded-xl'></span>
+                    <span className='w-5 h-1 bg-gray2 rounded-xl'></span>   
                     <span className='w-5 h-1 bg-gray2 rounded-xl'></span>
                     <span className='w-5 h-1 bg-gray2 rounded-xl'></span>
                     <span className='w-5 h-1 bg-gray2 rounded-xl'></span>

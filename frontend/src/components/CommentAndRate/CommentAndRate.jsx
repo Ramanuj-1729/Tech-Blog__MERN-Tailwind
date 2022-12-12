@@ -28,7 +28,7 @@ const CommentAndRate = () => {
                     <Undeline marginY="4" />
 
                     <div className="form-button space-x-4 flex justify-end">
-                        <button className='text-lg font-normal tracking-wider'>Clear</button>
+                        <button type='reset' className='text-lg font-normal tracking-wider'>Clear</button>
                         <PrimaryButton width="44" height="12" buttonName="Comment" />
                     </div>
                 </form>
