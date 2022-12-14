@@ -1,14 +1,13 @@
 // https://robkendal.co.uk/blog/how-to-build-a-multi-image-carousel-in-react-and-tailwind
 // https://dev.to/ziratsu/build-a-slider-with-react-4651
 
-import React, { useState } from 'react';
+import React from 'react';
 
 const PostsSlider = ({ heading, sliderClass, sliderId, postsData }) => {
-    const [posts, setPosts] = useState(postsData);
     const prev = () => {
         let items = document.getElementsByClassName(sliderClass);
         let itemArray = [...items];
-        const item = itemArray[posts.length - 1];
+        const item = itemArray[postsData.length - 1];
         document.getElementById(sliderId).prepend(item);
     }
 
@@ -28,7 +27,7 @@ const PostsSlider = ({ heading, sliderClass, sliderId, postsData }) => {
                 <div className='slider-wrapper flex items-center justify-center'>
                     <div id={sliderId} className="slider-main space-x-10 flex w-[160%]">
                         {
-                            posts.map((post) => (
+                            postsData.map((post) => (
                                 <div className={`${sliderClass} bg-red-400 w-[350px] h-[300px] relative`} key={post.id} >
                                     <img src={post.thumbnail} alt="post" />
                                     <div className="inner-content absolute bottom-2 left-4">

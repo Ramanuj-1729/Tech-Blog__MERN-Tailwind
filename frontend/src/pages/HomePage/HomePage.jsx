@@ -2,9 +2,21 @@ import React from 'react';
 import PostsSlider from '../../components/PostsSlider/PostsSlider';
 import Subscribe from '../../components/Subscribe/Subscribe';
 import PrimaryButton from '../../components/shared/PrimaryButton/PrimaryButton';
-import postsData from '../../components/PostsData';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import axios from "axios";
 
 const HomePage = () => {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        const fetchPosts = async () => {
+            const res = await axios.get("/posts");
+            setPosts(res.data);
+        }
+        fetchPosts();
+    }, []);
+
     return (
         <>
             <section className='hero-section'>
@@ -34,11 +46,11 @@ const HomePage = () => {
             </section>
 
             <section className='featured_articles-section'>
-                <PostsSlider heading="Featured Articles" sliderClass="featuredItem" sliderId="featuredSlider" postsData={postsData} />
+                <PostsSlider heading="Featured Articles" sliderClass="featuredItem" sliderId="featuredSlider" postsData={posts} />
             </section>
 
             <section className='populer_articles-section'>
-                <PostsSlider heading="Populer Articles" sliderClass="populerItem" sliderId="populerSlider" postsData={postsData} />
+                <PostsSlider heading="Populer Articles" sliderClass="populerItem" sliderId="populerSlider" postsData={posts} />
             </section>
 
             <section className='subscribe-section'>
