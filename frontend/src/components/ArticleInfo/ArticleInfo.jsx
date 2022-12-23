@@ -1,16 +1,31 @@
 import React from 'react';
-import StarRating from '../shared/StarRating/StarRating';
 import Undeline from '../shared/Underline/Underline';
 
-const ArticleInfo = () => {
+const ArticleInfo = ({ post }) => {
+    const publishDate = new Date(post.createdAt);
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const month = months[publishDate.getMonth()];
+    const date = publishDate.getDate();
+    const year = publishDate.getFullYear();
     return (
         <>
             <div className='articleInfo-wrapper flex items-center relative'>
-                <span className="auther-name font-poppins text-base font-normal text-fontColor px-2 border-r-2 border-gray2">By <b>Ramanuj</b></span>
-                <span className="article-publish-date font-poppins text-base font-normal text-fontColor px-2 border-r-2 border-gray2">July 31, 2022</span>
+                <span className="auther-name font-poppins text-base font-normal text-fontColor px-2 border-r-2 border-gray2">By <b>{post.userName}</b></span>
+                <span className="article-publish-date font-poppins text-base font-normal text-fontColor px-2 border-r-2 border-gray2">{`${month} ${date}, ${year}`}</span>
                 <div className="ratings flex items-center justify-center">
                     <span className="stars space-x-1 px-2 flex items-center justify-center">
-                        <StarRating />
+                        {
+                            [...Array(post.rating)].map((star, index) => {
+                                index += 1;
+                                return <i key={index} className="fa-solid fa-star mr-1 text-sm text-fontColor"></i>
+                            })
+                        }
+                        {
+                            post.rating <= 5 ? [...Array(5-post.rating)].map((star, index) => {
+                                index += 1;
+                                return <i key={index} className="fa-solid fa-star mr-1 text-sm text-gray2"></i>
+                            }) : ""
+                        }
                     </span>
                     <span className="count font-poppins text-base font-normal text-fontColor">300</span>
                 </div>

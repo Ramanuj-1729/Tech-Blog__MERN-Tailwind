@@ -2,6 +2,7 @@
 // https://dev.to/ziratsu/build-a-slider-with-react-4651
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PostsSlider = ({ heading, sliderClass, sliderId, postsData }) => {
     const prev = () => {
@@ -28,13 +29,15 @@ const PostsSlider = ({ heading, sliderClass, sliderId, postsData }) => {
                     <div id={sliderId} className="slider-main space-x-10 flex w-[160%]">
                         {
                             postsData.map((post) => (
-                                <div className={`${sliderClass} bg-red-400 w-[350px] h-[300px] relative`} key={post.id} >
-                                    <img src={post.thumbnail} alt="post" />
-                                    <div className="inner-content absolute bottom-2 left-4">
-                                        <div className="category bg-primary w-28 h-6 flex justify-center items-center rounded text-white font-poppins font-semibold text-sm mt-2 mb-4">{post.category}</div>
-                                        <h3 className='text-white font-poppins text-3xl font-semibold tracking-wide'>{post.title}</h3>
+                                <Link key={post._id} to={`/posts/article/${post._id}`}>
+                                    <div className={`${sliderClass} bg-red-400 w-[350px] h-[300px] relative`} >
+                                        <img className='brightness-50' src={post.thumbnail} alt="post" />
+                                        <div className="inner-content absolute bottom-2 left-4">
+                                            <div className="category bg-primary w-28 h-6 flex justify-center items-center rounded text-white font-poppins font-semibold text-sm mt-2 mb-4">{post.category}</div>
+                                            <h3 className='text-white font-poppins text-3xl font-semibold tracking-wide'>{post.title}</h3>
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
                             ))
                         }
 

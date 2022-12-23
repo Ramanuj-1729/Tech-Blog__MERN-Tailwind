@@ -31,8 +31,7 @@ const postsController = {
             const filePath = req.file.path;
 
             const postsSchema = Joi.object({
-                userId: Joi.number().required(),
-                id: Joi.number().required(),
+                userName: Joi.string().required(),
                 title: Joi.string().required(),
                 body: Joi.string().required(),
                 category: Joi.string().required(),
@@ -49,14 +48,13 @@ const postsController = {
                 return next(error);
             }
 
-            const { userId, id, title, body, category, rating } = req.body;
+            const { userName, title, body, category, rating } = req.body;
             let postsDocument;
 
             try {
                 postsDocument = await Posts.create({
                     thumbnail: filePath,
-                    userId,
-                    id,
+                    userName,
                     title,
                     body,
                     category,

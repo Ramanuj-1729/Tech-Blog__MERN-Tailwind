@@ -5,6 +5,7 @@ import PrimaryButton from '../../components/shared/PrimaryButton/PrimaryButton';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
     const [posts, setPosts] = useState([]);
@@ -16,6 +17,12 @@ const HomePage = () => {
         }
         fetchPosts();
     }, []);
+
+    const Navigation = useNavigate();
+
+    const onClick = ()=>{
+        Navigation('/posts');
+    }
 
     return (
         <>
@@ -32,7 +39,7 @@ const HomePage = () => {
                         <div className="hero-text-area">
                             <h1 className='font-poppins text-6xl font-black text-fontColor leading-[1.3] mb-4'>Enhance your <br /> knowledge</h1>
                             <p className='font-poppins font-medium text-base mb-4 text-fontColor leading-[1.3]'>Follow us to stay updated with technology <br /> and grow your technical knowledge.</p>
-                            <PrimaryButton width="44" height="12" buttonName="Find Out More" />
+                            <PrimaryButton width="44" height="12" buttonName="Find Out More" onClick={onClick} />
                         </div>
                     </div>
 
