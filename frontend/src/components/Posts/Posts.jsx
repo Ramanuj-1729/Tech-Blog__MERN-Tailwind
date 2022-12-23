@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import postsData from '../../components/PostsData';
+import React from 'react';
 
-const Posts = ({ start, end }) => {
-    const [posts, setPosts] = useState(postsData);
+const Posts = ({ start, end, posts }) => {
+    
 
     return (
         <>

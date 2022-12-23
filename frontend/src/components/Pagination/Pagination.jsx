@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import postData from '../PostsData';
 
-const Pagination = ({ showPerPage, onPaginationChange }) => {
+const Pagination = ({ showPerPage, onPaginationChange, posts }) => {
     const activeButtonStyle = {
         backgroundColor: "#FF3F59",
     }
-    const [numberOfButtons, setNumberOfButtons] = useState(Math.ceil(postData.length / showPerPage));
+    const [numberOfButtons, setNumberOfButtons] = useState(Math.ceil(posts.length / showPerPage));
     const [counter, setCounter] = useState(1);
     useEffect(() => {
         let value = showPerPage * counter;

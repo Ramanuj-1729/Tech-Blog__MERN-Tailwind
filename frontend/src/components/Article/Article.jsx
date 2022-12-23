@@ -15,7 +15,7 @@ const Article = () => {
                     </p>
                     <img className='w-full h-96' src="/images/car.png" alt="article-img" />
                     <p className='font-poppins text-base font-normal text-fontColor my-4 text-justify'>BMW has confirmed that the next-generation of BMW 7 Series will include an all-electric version. It's not going to be exclusively electric as there will be petrol, diesel and hybrid versions too - but there's talk of two versions, the i7 and the i7S. The latter is expect to have a 120kWh battery, 660hp and a range of 320 miles. BMW is serious about electric cars and there's a lot in the pipeline - the BMW i7 will take things to the luxury level.</p>
-                </div>
+                </div>  
             </div>
         </>
     );
