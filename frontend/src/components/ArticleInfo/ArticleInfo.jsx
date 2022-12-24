@@ -1,12 +1,39 @@
 import React from 'react';
 import Undeline from '../shared/Underline/Underline';
 
-const ArticleInfo = ({ post }) => {
+const ArticleInfo = ({ post, comment }) => {
     const publishDate = new Date(post.createdAt);
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const month = months[publishDate.getMonth()];
     const date = publishDate.getDate();
     const year = publishDate.getFullYear();
+
+    let ratingCount = [0, 0, 0, 0, 0];
+
+    for (let i = 0; i < comment.length; i++) {
+        if (comment[i].rating === 1) {
+            ratingCount[0]++;
+        }
+        else if (comment[i].rating === 2) {
+            ratingCount[1]++;
+        }
+        else if (comment[i].rating === 3) {
+            ratingCount[2]++;
+        }
+        else if (comment[i].rating === 4) {
+            ratingCount[3]++;
+        }
+        else if (comment[i].rating === 5) {
+            ratingCount[4]++;
+        }
+    }
+
+    let rating = 0;
+    for (let i = 0; i < 5; i++) {
+        rating = rating + ratingCount[i] * (i + 1);
+    }
+    rating = Math.round(rating / comment.length);
+    if (isNaN(rating)) rating = 0;
     return (
         <>
             <div className='articleInfo-wrapper flex items-center relative'>
@@ -15,19 +42,19 @@ const ArticleInfo = ({ post }) => {
                 <div className="ratings flex items-center justify-center">
                     <span className="stars space-x-1 px-2 flex items-center justify-center">
                         {
-                            [...Array(post.rating)].map((star, index) => {
+                            [...Array(rating)].map((star, index) => {
                                 index += 1;
                                 return <i key={index} className="fa-solid fa-star mr-1 text-sm text-fontColor"></i>
                             })
                         }
                         {
-                            post.rating <= 5 ? [...Array(5-post.rating)].map((star, index) => {
+                            [...Array( 5 - rating)].map((star, index) => {
                                 index += 1;
                                 return <i key={index} className="fa-solid fa-star mr-1 text-sm text-gray2"></i>
-                            }) : ""
+                            })
                         }
                     </span>
-                    <span className="count font-poppins text-base font-normal text-fontColor">300</span>
+                    <span className="count font-poppins text-base font-normal text-fontColor">{comment.length}</span>
                 </div>
                 <span className="social-icon absolute right-2 space-x-3">
                     <i className="fa-brands fa-instagram cursor-pointer"></i>

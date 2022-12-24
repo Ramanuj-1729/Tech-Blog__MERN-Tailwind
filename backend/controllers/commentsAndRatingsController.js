@@ -1,6 +1,5 @@
 import Joi from 'joi';
 import CommentsAndRatings from '../models/CommentsAndRatings';
-import Posts from '../models/Posts';
 import CustomErrorHandler from '../services/CustomErrorHandler';
 
 const commentsAndRatingsController = {
@@ -41,22 +40,10 @@ const commentsAndRatingsController = {
         res.status(201).json(commentDocument);
     },
 
-    // Get single comment
-    async getOneComment(req, res, next) {
-        try {
-            const comment = await CommentsAndRatings.findOne({ postId: req.params.id, userName: req.body.userName });
-            res.status(200).json(comment);
-        } catch (err) {
-            if (err) {
-                return next(CustomErrorHandler.serverError(err.message));
-            }
-        }
-    },
-
     //Get All Comments
     async getAllComments(req, res, next) {
         try {
-            const comments = await CommentsAndRatings.find();
+            const comments = await CommentsAndRatings.find({ postId: req.params.id });
             res.status(200).json(comments);
         } catch (err) {
             if (err) {

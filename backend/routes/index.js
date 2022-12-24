@@ -10,7 +10,6 @@ router.get('/posts', postsController.getAllPost);
 router.post('/categories', categoryController.createCategory);
 router.get('/categories', categoryController.getCategory);
 router.post('/comments', commentsAndRatingsController.createComment);
-router.get('/comments/:id', commentsAndRatingsController.getOneComment);
-router.get('/comments', commentsAndRatingsController.getAllComments);
+router.get('/comments/:id', commentsAndRatingsController.getAllComments);
 
 export default router;

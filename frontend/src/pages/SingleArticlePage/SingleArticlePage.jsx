@@ -11,25 +11,33 @@ const SingleArticlePage = () => {
     const location = useLocation();
     const path = location.pathname.split("/")[3];
     const [post, setPost] = useState({});
+    const [comment, setComment] = useState({});
 
     useEffect(() => {
         const getPost = async () => {
             const res = await axios.get("/api/posts/" + path);
             setPost(res.data);
         }
+        const getCommentAndRating = async () => {
+            const res = await axios.get("/api/comments/" + path);
+            setComment(res.data);
+        }
         getPost();
+        getCommentAndRating();
     }, [path]);
+
+
     return (
         <>
-            <main className='w-1/2 mx-auto my-12 space-y-8'>
+            <main className='w-3/5 mx-auto my-12 space-y-8'>
                 <section className="article">
-                    <Article post={post} />
+                    <Article post={post} comment={comment} />
                 </section>
                 <section className="comment-and-rate">
-                    <CommentAndRate />
+                    <CommentAndRate postId={path} />
                 </section>
                 <section className="comment-section">
-                    <CommentSection />
+                    <CommentSection comment={comment} />
                 </section>
             </main>
         </>

@@ -34,8 +34,7 @@ const postsController = {
                 userName: Joi.string().required(),
                 title: Joi.string().required(),
                 body: Joi.string().required(),
-                category: Joi.string().required(),
-                rating: Joi.number()
+                category: Joi.string().required()
             });
             const { error } = postsSchema.validate(req.body);
             if (error) {
@@ -48,7 +47,7 @@ const postsController = {
                 return next(error);
             }
 
-            const { userName, title, body, category, rating } = req.body;
+            const { userName, title, body, category } = req.body;
             let postsDocument;
 
             try {
@@ -57,8 +56,7 @@ const postsController = {
                     userName,
                     title,
                     body,
-                    category,
-                    rating
+                    category
                 });
 
             } catch (err) {
