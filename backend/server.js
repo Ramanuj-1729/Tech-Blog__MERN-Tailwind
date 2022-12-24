@@ -26,6 +26,5 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/api', routes);
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
-
 app.use(errorHandler)
 app.listen(APP_PORT, () => console.log(`Listening on port ${APP_PORT} ...`));

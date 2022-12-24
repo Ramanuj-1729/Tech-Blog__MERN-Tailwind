@@ -3,7 +3,7 @@ import ArticleInfo from '../ArticleInfo/ArticleInfo';
 import Undeline from '../shared/Underline/Underline';
 
 const Article = ({ post }) => {
-
+    const PF = "http://localhost:5000/";
 
     return (
         <>
@@ -11,10 +11,10 @@ const Article = ({ post }) => {
                 <h1 className='font-poppins block mx-auto text-4xl font-semibold text-fontColor my-4'>{post.title}</h1>
                 <ArticleInfo post={post} />
                 <div className="main-article">
-                    <img className='w-full h-96' src={post.thumbnail} alt="article-img" />
+                    {post.thumbnail && <img className='w-full h-96' src={PF + post.thumbnail} alt="article-img" />}
                     <Undeline marginY="4" />
                     <p className='font-poppins text-base font-normal text-fontColor my-4 text-justify'>{post.body}</p>
-                    <img className='w-full h-96' src={post.thumbnail} alt="article-img" />
+                    {post.thumbnail && <img className='w-full h-96' src={PF + post.thumbnail} alt="article-img" />}
                     <p className='font-poppins text-base font-normal text-fontColor my-4 text-justify'>{post.body}</p>
                 </div>
             </div>
