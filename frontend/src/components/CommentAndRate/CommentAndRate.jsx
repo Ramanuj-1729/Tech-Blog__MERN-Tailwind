@@ -62,7 +62,7 @@ const CommentAndRate = ({ postId }) => {
                     <div className="form-button space-x-4 flex justify-end items-center">
                         {loader === true ? <Loader /> : ""}
                         <button type='reset' className='text-lg font-normal tracking-wider'>Clear</button>
-                        <PrimaryButton width="44" height="12" buttonName="Comment" type="submit" />
+                        <PrimaryButton width="44" height="10" buttonName="Comment" type="submit" />
                     </div>
                 </form>
             </div>
