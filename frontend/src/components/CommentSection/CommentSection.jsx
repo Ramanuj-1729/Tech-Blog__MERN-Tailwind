@@ -1,8 +1,56 @@
 import React from 'react';
+import { useState } from 'react';
+import Underline from '../shared/Underline/Underline';
+import SingleComment from '../SingleComment/SingleComment';
 
-const CommentSection = () => {
+const CommentSection = ({ comments }) => {
+    const [start, setStart] = useState(0);
+    const [end, setEnd] = useState(4);
+
+    const onButtonClick = (type) => {
+        if (type === "prev") {
+            if (start >= 4) {
+                setStart(start - 4);
+                setEnd(end - 4);
+            }
+        } else if (type === 'next') {
+            if (end <= comments.length) {
+                setStart(start + 4);
+                setEnd(end + 4);
+            }
+        }
+    }
     return (
-        <div>CommentSection</div>
+        <>
+            <div className='flex items-center space-x-4'>
+                <h2 className='font-poppins text-2xl font-medium text-fontColor'>{comments.length} COMMENTS</h2>
+                <span className='text-fontColor opacity-60 text-xl'><i className="fa-solid fa-comments"></i></span>
+            </div>
+            <Underline marginY="4" />
+
+            <div className="comments">
+                {
+                    comments.slice(start, end).map((comment) => (
+                        <SingleComment key={comment._id} comment={comment} />
+                    ))
+                }
+            </div>
+
+            <div className="comments-pagination flex justify-between mt-5">
+                <div className="older-comments flex space-x-3 items-center">
+                    <div onClick={() => onButtonClick("prev")} className={`${start >= 4 ? '' : 'cursor-not-allowed'} prev-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center w-8 h-8 cursor-pointer`}>
+                        <i className="fa-solid fa-less-than"></i>
+                    </div>
+                    <span className='font-poppins text-base font-medium text-fontColor opacity-70'>Older Comments</span>
+                </div>
+                <div className="newer-comments flex space-x-3 items-center">
+                    <span className='font-poppins text-base font-medium text-fontColor opacity-70'>Newer Comments</span>
+                    <div onClick={() => onButtonClick("next")} className={`${end <= comments.length ? '' : 'cursor-not-allowed'} next-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center w-8 h-8 cursor-pointer`}>
+                        <i className="fa-solid fa-greater-than"></i>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 }
 

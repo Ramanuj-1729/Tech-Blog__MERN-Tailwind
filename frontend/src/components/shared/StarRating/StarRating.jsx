@@ -7,7 +7,7 @@ const StarRating = ({ getStar }) => {
 
     useEffect(() => {
         getStar(rating);
-    }, [rating]);
+    }, [rating, getStar]);
 
 
     return (

@@ -4,12 +4,12 @@ const Pagination = ({ showPerPage, onPaginationChange, posts }) => {
     const activeButtonStyle = {
         backgroundColor: "#FF3F59",
     }
-    const [numberOfButtons, setNumberOfButtons] = useState(Math.ceil(posts.length / showPerPage));
+    const numberOfButtons = Math.ceil(posts.length / showPerPage);
     const [counter, setCounter] = useState(1);
     useEffect(() => {
         let value = showPerPage * counter;
         onPaginationChange(value - showPerPage, value);
-    }, [counter])
+    }, [counter, showPerPage])
 
     const onButtonClick = (type) => {
         if (type === "prev") {

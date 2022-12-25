@@ -15,7 +15,7 @@ const PostsPage = () => {
         fetchPosts();
     }, []);
 
-    const [showPerPage, setShowPerPage] = useState(6)
+    const showPerPage = 6;
     const [pagination, setPagination] = useState({
         start: 0,
         end: showPerPage

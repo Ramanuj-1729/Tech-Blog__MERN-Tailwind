@@ -4,12 +4,14 @@ import Undeline from '../shared/Underline/Underline';
 import StarRating from '../shared/StarRating/StarRating';
 import { useState } from 'react';
 import axios from 'axios';
+import Loader from '../shared/Loader/Loader';
 
 const CommentAndRate = ({ postId }) => {
     const [rating, setRating] = useState(0);
     const [userName, setUserName] = useState("");
     const [email, setEmail] = useState("");
     const [comment, setComment] = useState("");
+    const [loader, setLoader] = useState(false);
 
     const getStar = (star) => {
         setRating(star);
@@ -25,7 +27,13 @@ const CommentAndRate = ({ postId }) => {
             comment
         };
         try {
-            const res = await axios.post("/api/comments", newComment);
+            setLoader(true);
+            await axios.post("/api/comments", newComment);
+            setTimeout(() => {
+                setLoader(false);
+                window.location.reload();
+            }, 2000);
+            
         } catch (err) { }
     };
     return (
@@ -51,7 +59,8 @@ const CommentAndRate = ({ postId }) => {
                     </div>
                     <Undeline marginY="4" />
 
-                    <div className="form-button space-x-4 flex justify-end">
+                    <div className="form-button space-x-4 flex justify-end items-center">
+                        {loader === true ? <Loader /> : ""}
                         <button type='reset' className='text-lg font-normal tracking-wider'>Clear</button>
                         <PrimaryButton width="44" height="12" buttonName="Comment" type="submit" />
                     </div>
