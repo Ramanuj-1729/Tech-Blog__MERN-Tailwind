@@ -33,7 +33,7 @@ const Pagination = ({ showPerPage, onPaginationChange, posts }) => {
                 <h1 className='font-poppins block mx-auto text-2xl font-medium text-fontColor mb-4'>More Articles</h1>
                 <div className="pagination-buttons flex items-center justify-center space-x-4">
                     <div onClick={() => onButtonClick("prev")} className="prev-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center w-8 h-8 cursor-pointer">
-                        <i className="fa-solid fa-less-than"></i>
+                        <i className="fa-solid fa-angle-left"></i>
                     </div>
                     <div className="number-buttons space-x-4 flex items-center justify-center">
                         {
@@ -43,7 +43,7 @@ const Pagination = ({ showPerPage, onPaginationChange, posts }) => {
                         }
                     </div>
                     <div onClick={() => onButtonClick("next")} className="next-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center w-8 h-8 cursor-pointer">
-                        <i className="fa-solid fa-greater-than"></i>
+                        <i className="fa-solid fa-angle-right"></i>
                     </div>
                 </div>
             </div>

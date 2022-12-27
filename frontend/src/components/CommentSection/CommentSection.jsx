@@ -39,14 +39,14 @@ const CommentSection = ({ comments }) => {
             <div className="comments-pagination flex justify-between mt-5">
                 <div className="older-comments flex space-x-3 items-center">
                     <div onClick={() => onButtonClick("prev")} className={`${start >= 4 ? '' : 'cursor-not-allowed'} prev-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center w-8 h-8 cursor-pointer`}>
-                        <i className="fa-solid fa-less-than"></i>
+                        <i className="fa-solid fa-angle-left"></i>
                     </div>
                     <span className='font-poppins text-base font-medium text-fontColor opacity-70'>Older Comments</span>
                 </div>
                 <div className="newer-comments flex space-x-3 items-center">
                     <span className='font-poppins text-base font-medium text-fontColor opacity-70'>Newer Comments</span>
                     <div onClick={() => onButtonClick("next")} className={`${end <= comments.length ? '' : 'cursor-not-allowed'} next-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center w-8 h-8 cursor-pointer`}>
-                        <i className="fa-solid fa-greater-than"></i>
+                        <i className="fa-solid fa-angle-right"></i>
                     </div>
                 </div>
             </div>

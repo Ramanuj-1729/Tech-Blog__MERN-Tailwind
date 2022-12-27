@@ -60,7 +60,7 @@ const Navbar = () => {
 
                         <li ref={refCategory} className="text-fontColor text-sm font-semibold">
                             <span className={`dropDownWrapper ${dropDownActive === true ? 'text-primary border-b-2 border-primary' : ''} cursor-pointer focus:text-primary hover:text-primary px-1 pb-4 transition-all hover:border-b-2 focus:border-b-2 ease-in-out delay-150 border-primary ${path === "/category" ? active : ""}`}>Category</span>
-                            <div className={`dropDownWrapper ${dropDownActive === true ? 'block' : 'hidden'} absolute top-16 bg-white drop-shadow-lg rounded-md`}>
+                            <div className={`dropDownWrapper ${dropDownActive === true ? 'block' : 'hidden'} absolute top-16 bg-white drop-shadow-xl rounded-md`}>
                                 <ul className="flex items-center justify-center flex-col">
                                     {
                                         categories.map((category) => (
