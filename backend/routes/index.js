@@ -12,5 +12,6 @@ router.get('/categories', categoryController.getCategory);
 router.post('/comments', commentsAndRatingsController.createComment);
 router.get('/comments/:id', commentsAndRatingsController.getAllComments);
 router.post('/queries', queryController.createQuery);
+router.get('/queries', queryController.getAllQuery);
 
 export default router;

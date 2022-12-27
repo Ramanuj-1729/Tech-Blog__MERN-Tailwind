@@ -3,17 +3,19 @@ import Pagination from '../../components/Pagination/Pagination';
 import Posts from '../../components/Posts/Posts';
 import Underline from '../../components/shared/Underline/Underline';
 import axios from 'axios';
+import { useLocation } from 'react-router-dom';
 
 const PostsPage = () => {
     const [posts, setPosts] = useState([]);
+    const { search } = useLocation();
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const res = await axios.get("/api/posts/");
+            const res = await axios.get("/api/posts/"+search);
             setPosts(res.data);
         }
         fetchPosts();
-    }, []);
+    }, [search]);
 
     const showPerPage = 6;
     const [pagination, setPagination] = useState({
