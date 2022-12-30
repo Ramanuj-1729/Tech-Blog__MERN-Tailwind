@@ -5,18 +5,18 @@ import ContactForm from '../../components/ContactForm/ContactForm';
 const ContactUsPage = () => {
   return (
     <>
-      <div className="contactUs-wrapper flex items-center justify-center flex-col">
-        <h1 className='font-poppins block mx-auto text-5xl font-semibold text-fontColor leading-[1.2] mt-8 mb-4'>Contact Us</h1>
-        <p className='font-poppins block mx-auto text-base font-medium text-gray3 mb-8'>Any question or remaks ? Just write us a message !</p>
+      <div className="contactUs-wrapper flex items-center justify-center flex-col wideScreen:mt-10">
+        <h1 className='font-poppins block mx-auto wideScreen:text-6xl font-semibold text-fontColor leading-[1.2] mt-8 mb-4'>Contact Us</h1>
+        <p className='font-poppins block mx-auto wideScreen:text-lg font-medium text-gray3 mb-8'>Any question or remaks ? Just write us a message !</p>
         <div className="contactUs-main flex items-center justify-center space-x-28">
           <div className="contactUs-image-wrapper">
-            <img className='w-[450px]' src="/images/contact_us.svg" alt="contact us" />
+            <img className='wideScreen:w-[480px]' src="/images/contact_us.svg" alt="contact us" />
           </div>
           <div className="contactUs-form-wrapper">
             <ContactForm />
           </div>
         </div>
-        <div className="social-media-links font-semibold text-base text-fontColor font-poppins flex items-center justify-center space-x-40 my-3">
+        <div className="social-media-links font-semibold text-base text-fontColor font-poppins flex items-center justify-center wideScreen:space-x-52 mt-20 mb-3">
           <NavLink to="#">
             <div className="email-link space-x-4">
               <span className='text-primary'><i className="fa-solid fa-at"></i></span>
