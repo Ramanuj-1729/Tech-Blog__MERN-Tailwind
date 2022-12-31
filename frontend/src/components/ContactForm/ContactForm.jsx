@@ -29,18 +29,18 @@ const ContactForm = () => {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div className="form-inputs font-poppins space-y-5 wideScreen:text-lg desktop:text-base">
-                    <div className="name-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 desktop:p-2 space-x-2">
+                <div className="form-inputs font-poppins space-y-5 wideScreen:text-lg largeTablet:text-base">
+                    <div className="name-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 largeTablet:p-2 space-x-2">
                         <span className='text-gray2'><i className="fa-solid fa-user"></i></span>
-                        <input className='border-none outline-none wideScreen:w-[430px] desktop:w-[400px]' type="text" name="name" placeholder='Name' onChange={e => setUserName(e.target.value)} />
+                        <input className='border-none outline-none wideScreen:w-[430px] desktop:w-[400px] largeTablet:w-[380px]' type="text" name="name" placeholder='Name' onChange={e => setUserName(e.target.value)} />
                     </div>
-                    <div className="email-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 desktop:p-2 space-x-2">
+                    <div className="email-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 largeTablet:p-2 space-x-2">
                         <span className='text-gray2'><i className="fa-solid fa-envelope"></i></span>
-                        <input className='border-none outline-none wideScreen:w-[430px] desktop:w-[400px]' type="email" name="email" placeholder='Email' onChange={e => setEmail(e.target.value)} />
+                        <input className='border-none outline-none wideScreen:w-[430px] desktop:w-[400px] largeTablet:w-[380px]' type="email" name="email" placeholder='Email' onChange={e => setEmail(e.target.value)} />
                     </div>
-                    <div className="message-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 desktop:p-2 space-x-2 flex">
+                    <div className="message-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 largeTablet:p-2 space-x-2 flex">
                         <span className='text-gray2'><i className="fa-solid fa-comments"></i></span>
-                        <textarea className='border-none outline-none wideScreen:w-[430px] desktop:w-[400px]' name="message" cols="40" rows="6" placeholder='Message' onChange={e => setMessage(e.target.value)} ></textarea>
+                        <textarea className='border-none outline-none wideScreen:w-[430px] desktop:w-[400px] largeTablet:w-[380px]' name="message" cols="40" rows="6" placeholder='Message' onChange={e => setMessage(e.target.value)} ></textarea>
                     </div>
                 </div>
 

@@ -29,7 +29,7 @@ const SingleArticlePage = () => {
 
     return (
         <>
-            <main className='desktop:w-2/3 mx-auto my-12 space-y-8'>
+            <main className='largeTablet:w-2/3 mx-auto my-12 space-y-8'>
                 <section className="article">
                     <Article post={post} comments={comments} />
                 </section>
