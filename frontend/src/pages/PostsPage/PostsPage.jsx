@@ -28,7 +28,7 @@ const PostsPage = () => {
     return (
         <>
             <div className="article-wrapper flex items-center justify-center flex-col w-fit mx-auto">
-                <h1 className='font-poppins block mx-auto wideScreen:text-[52px] font-medium text-fontColor mt-8 mb-8'>{search === '' ? 'All Posts' : search.slice(5).replace('%20', " ")}</h1>
+                <h1 className='font-poppins block mx-auto wideScreen:text-[52px] desktop:text-[46px] font-medium text-fontColor mt-8 mb-8'>{search === '' ? 'All Posts' : search.slice(5).replace('%20', " ")}</h1>
                 <div className="posts-wrapper">
                     <Posts start={pagination.start} end={pagination.end} posts={posts} />
                 </div>
