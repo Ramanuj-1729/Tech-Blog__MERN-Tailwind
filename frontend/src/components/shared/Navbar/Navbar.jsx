@@ -47,13 +47,13 @@ const Navbar = () => {
 
     return (
         <nav className={`navbar sticky top-0 z-10 bg-white ${shadow === true ? "drop-shadow-xl" : ""} transition duration-300 ease-out`}>
-            <div className="navbar-wrapper max-w-[1536px] mx-auto desktop:px-36 largeTablet:px-20 flex items-center justify-between h-16">
+            <div className="navbar-wrapper max-w-[1536px] mx-auto desktop:px-36 largeTablet:px-20 mediumTablet:px-8 flex items-center justify-between h-16">
                 <div className="logo flex-shrink-0">
                     <NavLink to="/"><h1 className='font-poppins font-black text-3xl text-primary cursor-pointer'>TechBlog</h1></NavLink>
                 </div>
 
                 <div className="menu font-poppins">
-                    <ul className="flex space-x-10 items-center">
+                    <ul className="flex largeTablet:space-x-10 mediumTablet:space-x-8 items-center">
                         <li><NavLink to="/" className={`hover:text-primary px-1 pb-4 text-sm font-semibold transition-all ease-in-out delay-150 hover:border-b-2 border-primary ${path === "/" ? active : ""}`}>Home</NavLink></li>
 
                         <li><NavLink to="/posts" className={`text-fontColor hover:text-primary px-1 pb-4 text-sm font-semibold transition-all hover:border-b-2 ease-in-out delay-150 border-primary ${path === "/posts" || path === "/posts/article" ? active : ""}`}>Posts</NavLink></li>

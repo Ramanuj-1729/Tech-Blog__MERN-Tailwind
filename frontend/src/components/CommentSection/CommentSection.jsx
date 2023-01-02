@@ -23,8 +23,8 @@ const CommentSection = ({ comments }) => {
     return (
         <>
             <div className='flex items-center space-x-4'>
-                <h2 className='font-poppins wideScreen:text-3xl largeTablet:text-2xl font-medium text-fontColor'>{comments.length} COMMENTS</h2>
-                <span className='text-fontColor opacity-60 wideScreen:text-2xl largeTablet:text-xl'><i className="fa-solid fa-comments"></i></span>
+                <h2 className='font-poppins wideScreen:text-3xl mediumTablet:text-2xl font-medium text-fontColor'>{comments.length} COMMENTS</h2>
+                <span className='text-fontColor opacity-60 wideScreen:text-2xl mediumTablet:text-xl'><i className="fa-solid fa-comments"></i></span>
             </div>
             <Underline marginY="4" />
 
@@ -38,14 +38,14 @@ const CommentSection = ({ comments }) => {
 
             <div className="comments-pagination flex justify-between mt-5">
                 <div className="older-comments flex space-x-3 items-center">
-                    <div onClick={() => onButtonClick("prev")} className={`${start >= 4 ? '' : 'cursor-not-allowed'} prev-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center wideScreen:w-10 wideScreen:h-10 largeTablet:w-8 largeTablet:h-8 cursor-pointer`}>
+                    <div onClick={() => onButtonClick("prev")} className={`${start >= 4 ? '' : 'cursor-not-allowed'} prev-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center wideScreen:w-10 wideScreen:h-10 mediumTablet:w-8 mediumTablet:h-8 cursor-pointer`}>
                         <i className="fa-solid fa-angle-left"></i>
                     </div>
-                    <span className='font-poppins wideScreen:text-lg largeTablet:text-base font-medium text-fontColor opacity-70'>Older Comments</span>
+                    <span className='font-poppins wideScreen:text-lg mediumTablet:text-base font-medium text-fontColor opacity-70'>Older Comments</span>
                 </div>
                 <div className="newer-comments flex space-x-3 items-center">
-                    <span className='font-poppins wideScreen:text-lg largeTablet:text-base font-medium text-fontColor opacity-70'>Newer Comments</span>
-                    <div onClick={() => onButtonClick("next")} className={`${end <= comments.length ? '' : 'cursor-not-allowed'} next-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center wideScreen:w-10 wideScreen:h-10 largeTablet:w-8 largeTablet:h-8 cursor-pointer`}>
+                    <span className='font-poppins wideScreen:text-lg mediumTablet:text-base font-medium text-fontColor opacity-70'>Newer Comments</span>
+                    <div onClick={() => onButtonClick("next")} className={`${end <= comments.length ? '' : 'cursor-not-allowed'} next-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center wideScreen:w-10 wideScreen:h-10 mediumTablet:w-8 mediumTablet:h-8 cursor-pointer`}>
                         <i className="fa-solid fa-angle-right"></i>
                     </div>
                 </div>

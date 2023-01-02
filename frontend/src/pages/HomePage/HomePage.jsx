@@ -27,24 +27,24 @@ const HomePage = () => {
         <>
             <section className='hero-section'>
                 <div className='flex items-center justify-center w-full h-[calc(100vh-4rem)]'>
-                    <div className="hero-bg-img flex items-center justify-center wideScreen:w-3/6 largeTablet:w-5/12 -z-10">
+                    <div className="hero-bg-img flex items-center justify-center wideScreen:w-3/6 largeTablet:w-5/12 mediumTablet:w-3/5 -z-10">
                         <img src="/images/blob.svg" alt="hero-bg" />
                     </div>
 
-                    <div className='hero-content absolute flex items-center wideScreen:space-x-16 desktop:space-x-12 largeTablet:space-x-10'>
+                    <div className='hero-content absolute flex items-center wideScreen:space-x-16 desktop:space-x-12 largeTablet:space-x-10 mediumTablet:space-x-8'>
                         <div className="hero-img-area">
-                            <img className='wideScreen:w-[38rem] desktop:w-[32rem] largeTablet:w-[26rem]' src="/images/hero.svg" alt="hero-img" />
+                            <img className='wideScreen:w-[38rem] desktop:w-[32rem] largeTablet:w-[26rem] mediumTablet:w-[22rem]' src="/images/hero.svg" alt="hero-img" />
                         </div>
                         <div className="hero-text-area">
-                            <h1 className='font-poppins wideScreen:text-[65px] desktop:text-[56px] largeTablet:text-[50px] font-black text-fontColor wideScreen:leading-[1.3] largeTablet:leading-[1.2] mb-4'>Enhance your <br /> knowledge</h1>
-                            <p className='font-poppins font-medium wideScreen:text-lg largeTablet:text-base mb-4 text-fontColor wideScreen:leading-[1.3] largeTablet:leading-[1.2]'>Follow us to stay updated with technology <br /> and grow your technical knowledge.</p>
+                            <h1 className='font-poppins wideScreen:text-[65px] desktop:text-[56px] largeTablet:text-[50px] mediumTablet:text-[40px] font-black text-fontColor wideScreen:leading-[1.3] mediumTablet:leading-[1.2] mb-4'>Enhance your <br /> knowledge</h1>
+                            <p className='font-poppins font-medium wideScreen:text-lg largeTablet:text-base mediumTablet:text-sm mb-4 text-fontColor wideScreen:leading-[1.3] mediumTablet:leading-[1.2]'>Follow us to stay updated with technology <br /> and grow your technical knowledge.</p>
                             <PrimaryButton buttonName="Find Out More" onClick={onClick} />
                         </div>
                     </div>
 
                     <div className="scrollBtn absolute bottom-1 flex flex-col items-center cursor-pointer">
-                        <span className='font-semibold text-fontColor wideScreen:text-lg largeTablet:text-base'>Scroll Down</span>
-                        <div className='mt-2 wideScreen:w-6 wideScreen:h-11 largeTablet:w-5 largeTablet:h-10 border-dotted border-2 border-fontColor flex items-center justify-center rounded-xl'>
+                        <span className='font-semibold text-fontColor wideScreen:text-lg mediumTablet:text-base'>Scroll Down</span>
+                        <div className='mt-2 wideScreen:w-6 wideScreen:h-11 mediumTablet:w-5 mediumTablet:h-10 border-dotted border-2 border-fontColor flex items-center justify-center rounded-xl'>
                             <i className="fa-solid fa-angles-down text-fontColor"></i>
                         </div>
                     </div>

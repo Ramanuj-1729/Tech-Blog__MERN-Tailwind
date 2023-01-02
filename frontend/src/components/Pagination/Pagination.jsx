@@ -30,19 +30,19 @@ const Pagination = ({ showPerPage, onPaginationChange, posts }) => {
     return (
         <>
             <div className="pagination-wrapper flex items-center justify-center flex-col mb-8">
-                <h1 className='font-poppins block mx-auto wideScreen:text-[28px] largeTablet:text-[25px] font-medium text-fontColor mb-4'>More Articles</h1>
-                <div className="pagination-buttons flex items-center justify-center space-x-4 wideScreen:text-lg largeTablet:text-base">
-                    <div onClick={() => onButtonClick("prev")} className="prev-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center wideScreen:w-10 wideScreen:h-10 largeTablet:w-8 largeTablet:h-8 cursor-pointer">
+                <h1 className='font-poppins block mx-auto wideScreen:text-[28px] largeTablet:text-[25px] mediumTablet:text-[23px] font-medium text-fontColor mb-4'>More Articles</h1>
+                <div className="pagination-buttons flex items-center justify-center space-x-4 wideScreen:text-lg largeTablet:text-base mediumTablet:text-sm">
+                    <div onClick={() => onButtonClick("prev")} className="prev-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center wideScreen:w-10 wideScreen:h-10 largeTablet:w-8 largeTablet:h-8 mediumTablet:w-7 mediumTablet:h-7 cursor-pointer">
                         <i className="fa-solid fa-angle-left"></i>
                     </div>
                     <div className="number-buttons space-x-4 flex items-center justify-center">
                         {
                             new Array(numberOfButtons).fill("").map((el, index) => (
-                                <span style={index + 1 === counter ? activeButtonStyle : null} onClick={() => setCounter(index + 1)} className='flex items-center justify-center wideScreen:w-10 wideScreen:h-10 largeTablet:w-8 largeTablet:h-8 bg-gray2 text-white font-semibold font-poppins cursor-pointer' key={index.toString()}>{index + 1}</span>
+                                <span style={index + 1 === counter ? activeButtonStyle : null} onClick={() => setCounter(index + 1)} className='flex items-center justify-center wideScreen:w-10 wideScreen:h-10 largeTablet:w-8 largeTablet:h-8 mediumTablet:w-7 mediumTablet:h-7 bg-gray2 text-white font-semibold font-poppins cursor-pointer' key={index.toString()}>{index + 1}</span>
                             ))
                         }
                     </div>
-                    <div onClick={() => onButtonClick("next")} className="next-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center wideScreen:w-10 wideScreen:h-10 largeTablet:w-8 largeTablet:h-8 cursor-pointer">
+                    <div onClick={() => onButtonClick("next")} className="next-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center wideScreen:w-10 wideScreen:h-10 largeTablet:w-8 largeTablet:h-8 mediumTablet:w-7 mediumTablet:h-7 cursor-pointer">
                         <i className="fa-solid fa-angle-right"></i>
                     </div>
                 </div>

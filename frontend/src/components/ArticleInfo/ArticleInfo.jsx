@@ -36,7 +36,7 @@ const ArticleInfo = ({ post, comment }) => {
     if (isNaN(rating)) rating = 0;
     return (
         <>
-            <div className='articleInfo-wrapper flex items-center relative wideScreen:text-lg largeTablet:text-base'>
+            <div className='articleInfo-wrapper flex items-center relative wideScreen:text-lg mediumTablet:text-base'>
                 <span className="auther-name font-poppins font-normal text-fontColor px-2 border-r-2 border-gray2">By <b>{post.userName}</b></span>
                 <span className="article-publish-date font-poppins font-normal text-fontColor px-2 border-r-2 border-gray2">{`${month} ${date}, ${year}`}</span>
                 <div className="ratings flex items-center justify-center">
