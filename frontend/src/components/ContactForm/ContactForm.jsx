@@ -29,24 +29,24 @@ const ContactForm = () => {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div className="form-inputs font-poppins space-y-5 wideScreen:text-lg mediumTablet:text-base">
-                    <div className="name-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 mediumTablet:p-2 space-x-2">
+                <div className="form-inputs font-poppins space-y-5 wideScreen:text-lg smallTablet:text-base">
+                    <div className="name-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 smallTablet:p-2 space-x-2">
                         <span className='text-gray2'><i className="fa-solid fa-user"></i></span>
-                        <input className='border-none outline-none wideScreen:w-[430px] desktop:w-[400px] largeTablet:w-[380px] mediumTablet:w-[320px]' type="text" name="name" placeholder='Name' onChange={e => setUserName(e.target.value)} />
+                        <input className='border-none outline-none wideScreen:w-[430px] desktop:w-[400px] largeTablet:w-[380px] mediumTablet:w-[320px] smallTablet:w-[480px]' type="text" name="name" placeholder='Name' onChange={e => setUserName(e.target.value)} />
                     </div>
-                    <div className="email-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 mediumTablet:p-2 space-x-2">
+                    <div className="email-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 smallTablet:p-2 space-x-2">
                         <span className='text-gray2'><i className="fa-solid fa-envelope"></i></span>
-                        <input className='border-none outline-none wideScreen:w-[430px] desktop:w-[400px] largeTablet:w-[380px] mediumTablet:w-[320px]' type="email" name="email" placeholder='Email' onChange={e => setEmail(e.target.value)} />
+                        <input className='border-none outline-none wideScreen:w-[430px] desktop:w-[400px] largeTablet:w-[380px] mediumTablet:w-[320px] smallTablet:w-[480px]' type="email" name="email" placeholder='Email' onChange={e => setEmail(e.target.value)} />
                     </div>
-                    <div className="message-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 mediumTablet:p-2 space-x-2 flex">
+                    <div className="message-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 smallTablet:p-2 space-x-2 flex">
                         <span className='text-gray2'><i className="fa-solid fa-comments"></i></span>
-                        <textarea className='border-none outline-none wideScreen:w-[430px] desktop:w-[400px] largeTablet:w-[380px] mediumTablet:w-[320px]' name="message" cols="40" rows="6" placeholder='Message' onChange={e => setMessage(e.target.value)} ></textarea>
+                        <textarea className='border-none outline-none wideScreen:w-[430px] desktop:w-[400px] largeTablet:w-[380px] mediumTablet:w-[320px] smallTablet:w-[480px]' name="message" cols="40" rows="6" placeholder='Message' onChange={e => setMessage(e.target.value)} ></textarea>
                     </div>
                 </div>
 
                 <div className="form-button my-6 space-x-4 flex justify-end items-center">
                     {loader === true ? <Loader /> : ""}
-                    <button type='reset' className='largeTablet:text-lg mediumTablet:text-base font-normal tracking-wider'>Clear</button>
+                    <button type='reset' className='largeTablet:text-lg smallTablet:text-base font-normal tracking-wider'>Clear</button>
                     <PrimaryButton width="44" height="10" buttonName="Send Message" type="submit" />
                 </div>
             </form>
