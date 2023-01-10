@@ -47,12 +47,12 @@ const Navbar = () => {
 
     return (
         <nav className={`navbar sticky top-0 z-10 bg-white ${shadow === true ? "drop-shadow-xl" : ""} transition duration-300 ease-out`}>
-            <div className="navbar-wrapper max-w-[1536px] mx-auto desktop:px-36 largeTablet:px-20 mediumTablet:px-8 smallTablet:px-20 flex items-center justify-between h-16">
+            <div className="navbar-wrapper max-w-[1536px] mx-auto desktop:px-36 largeTablet:px-20 mediumTablet:px-8 smallTablet:px-20 largePhone:px-8 flex items-center justify-between h-16">
                 <div className="logo flex-shrink-0">
                     <NavLink to="/"><h1 className='font-poppins font-black text-3xl text-primary cursor-pointer'>TechBlog</h1></NavLink>
                 </div>
 
-                <div className="menu font-poppins mediumTablet:block smallTablet:hidden">
+                <div className="menu font-poppins mediumTablet:block largePhone:hidden">
                     <ul className="flex largeTablet:space-x-10 mediumTablet:space-x-8 items-center">
                         <li><NavLink to="/" className={`hover:text-primary px-1 pb-4 text-sm font-semibold transition-all ease-in-out delay-150 hover:border-b-2 border-primary ${path === "/" ? active : ""}`}>Home</NavLink></li>
 
@@ -81,7 +81,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="small-screen-menu mediumTablet:hidden smallTablet:flex justify-center items-center space-x-8">
+                <div className="small-screen-menu mediumTablet:hidden largePhone:flex justify-center items-center space-x-8">
                     <span className='search text-fontColor hover:text-primary px-1 py-2 text-sm font-semibold transition-all ease-in-out delay-150 cursor-pointer'><i className="fa-solid fa-magnifying-glass"></i></span>
                     <span className="space-y-1 cursor-pointer z-10">
                         <div className="bg-fontColor w-8 h-[3px] rounded-xl"></div>
