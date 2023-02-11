@@ -26,7 +26,7 @@ const HomePage = () => {
     return (
         <>
             <section className='hero-section'>
-                <div className='flex items-center justify-center w-full h-[calc(100vh-4rem)]'>
+                <div className='flex items-center justify-center w-full wideScreen:my-8 desktop:my-16 largeTablet:my-20 mediumTablet:my-24 smallTablet:my-28 smallPhone:my-32'>
                     <div className="hero-bg-img mediumTablet:rotate-0 mediumTablet:scale-x-[none] smallPhone:rotate-[205deg] smallPhone:scale-x-[-1] flex items-center justify-center wideScreen:w-3/6 largeTablet:w-5/12 mediumTablet:w-3/5 smallPhone:w-[75%] -z-10">
                         <img src="/images/blob.svg" alt="hero-bg" />
                     </div>
@@ -42,12 +42,12 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    <div className="scrollBtn absolute bottom-1 flex flex-col items-center cursor-pointer wideScreen:text-lg mediumTablet:text-base smallPhone:text-sm">
+                    {/* <div className="scrollBtn absolute bottom-1 flex flex-col items-center cursor-pointer wideScreen:text-lg mediumTablet:text-base smallPhone:text-sm">
                         <span className='font-semibold text-fontColor'>Scroll Down</span>
                         <div className='mt-2 wideScreen:w-6 wideScreen:h-11 mediumTablet:w-5 mediumTablet:h-10 smallPhone:w-5 smallPhone:h-9 border-dotted border-2 border-fontColor flex items-center justify-center rounded-xl'>
                             <i className="fa-solid fa-angles-down text-fontColor"></i>
                         </div>
-                    </div>
+                    </div> */}  
                 </div>
             </section>
 
