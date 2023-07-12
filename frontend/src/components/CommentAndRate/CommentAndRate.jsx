@@ -12,6 +12,7 @@ const CommentAndRate = ({ postId }) => {
     const [email, setEmail] = useState("");
     const [comment, setComment] = useState("");
     const [loader, setLoader] = useState(false);
+    const [clearRating, setClearRating] = useState(false);
 
     const getStar = (star) => {
         setRating(star);
@@ -29,11 +30,12 @@ const CommentAndRate = ({ postId }) => {
         try {
             setLoader(true);
             await axios.post("/api/comments", newComment);
-            setTimeout(() => {
-                setLoader(false);
-                window.location.reload();
-            }, 2000);
-            
+            setLoader(false);
+            setRating(0);
+            setUserName("");
+            setEmail("");
+            setComment("");
+            setClearRating(true);
         } catch (err) { }
     };
     return (
@@ -45,16 +47,16 @@ const CommentAndRate = ({ postId }) => {
                     <div className="form-inputs font-poppins space-y-5 wideScreen:text-lg largePhone:text-base smallPhone:text-sm">
                         <div className="rateIt-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 smallPhone:p-2 flex item-center space-x-5">
                             <span className='text-gray2'>Rate it</span>
-                            <StarRating getStar={getStar} />
+                            <StarRating getStar={getStar} clearRating={clearRating} />
                         </div>
                         <div className="name-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 smallPhone:p-2">
-                            <input className='border-none outline-none w-full' type="text" name="name" placeholder='Name' onChange={e => setUserName(e.target.value)} />
+                            <input className='border-none outline-none w-full' type="text" name="name" placeholder='Name' onChange={e => setUserName(e.target.value)} value={userName} />
                         </div>
                         <div className="email-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 smallPhone:p-2">
-                            <input className='border-none outline-none w-full' type="email" name="email" placeholder='Email' onChange={e => setEmail(e.target.value)} />
+                            <input className='border-none outline-none w-full' type="email" name="email" placeholder='Email' onChange={e => setEmail(e.target.value)} value={email} />
                         </div>
                         <div className="comment-input border-2 border-gray2 rounded-[5px] wideScreen:p-3 smallPhone:p-2">
-                            <textarea className='border-none outline-none w-full' name="comment" cols="40" rows="4" placeholder='Comment' onChange={e => setComment(e.target.value)}></textarea>
+                            <textarea className='border-none outline-none w-full' name="comment" cols="40" rows="4" placeholder='Comment' onChange={e => setComment(e.target.value)} value={comment} ></textarea>
                         </div>
                     </div>
                     <Undeline marginY="4" />

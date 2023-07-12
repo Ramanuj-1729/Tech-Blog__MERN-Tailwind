@@ -45,7 +45,7 @@ const CommentSection = ({ comments }) => {
                 </div>
                 <div className="newer-comments flex space-x-3 items-center">
                     <span className='font-poppins wideScreen:text-lg largePhone:text-base smallPhone:text-xs font-medium text-fontColor opacity-70'>Newer Comments</span>
-                    <div onClick={() => onButtonClick("next")} className={`${end <= comments.length ? '' : 'cursor-not-allowed'} next-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center wideScreen:w-10 wideScreen:h-10 smallTablet:w-8 smallTablet:h-8 largePhone:w-7 largePhone:h-7 smallPhone:w-6 smallPhone:h-6 cursor-pointer`}>
+                    <div onClick={() => onButtonClick("next")} className={`${end < comments.length ? '' : 'cursor-not-allowed'} next-button text-gray2 border-2 rounded-full border-gray2 flex items-center justify-center wideScreen:w-10 wideScreen:h-10 smallTablet:w-8 smallTablet:h-8 largePhone:w-7 largePhone:h-7 smallPhone:w-6 smallPhone:h-6 cursor-pointer`}>
                         <i className="fa-solid fa-angle-right"></i>
                     </div>
                 </div>

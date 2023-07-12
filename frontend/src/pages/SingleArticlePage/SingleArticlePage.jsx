@@ -24,7 +24,7 @@ const SingleArticlePage = () => {
         }
         getPost();
         getCommentAndRating();
-    }, [path]);
+    }, [path, comments, post]);
 
 
     return (

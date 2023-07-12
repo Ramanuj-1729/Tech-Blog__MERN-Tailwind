@@ -85,7 +85,7 @@ const Navbar = () => {
 
                 <div className="small-screen-menu mediumTablet:hidden smallPhone:flex justify-center items-center">
                     <span className='search text-fontColor hover:text-primary px-1 py-2 mr-8 text-sm font-semibold transition-all ease-in-out delay-150 cursor-pointer'><i className="fa-solid fa-magnifying-glass"></i></span>
-                    <span className="cursor-pointer text-fontColor hover:text-primary text-xl transition-all ease-in-out delay-150" onClick={() => setHameburgerActive(true)}><i class="fa-solid fa-bars"></i></span>
+                    <span className="cursor-pointer text-fontColor hover:text-primary text-xl transition-all ease-in-out delay-150" onClick={() => setHameburgerActive(true)}><i className="fa-solid fa-bars"></i></span>
                 </div>
 
                 <div className={`menu absolute h-screen largePhone:w-1/2 smallPhone:w-4/6 top-0 right-0 bottom-0 bg-white drop-shadow-2xl text-fontColor text-lg font-medium justify-center pt-20 ${hameburgerActive === true ? 'flex' : 'hidden'}`}>

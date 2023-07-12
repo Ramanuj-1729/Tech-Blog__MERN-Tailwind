@@ -21,7 +21,7 @@ const SingleComment = ({ comment }) => {
                 </div>
                 <div className="info">
                     <h3 className="userName font-poppins wideScreen:text-[22px] largeTablet:text-[20px] largePhone:text-[18px] smallPhone:text-[17px] font-medium text-fontColor">{comment.userName}</h3>
-                    <span className='dateAndTime font-normal wideScreen:text-base largePhone:text-sm smallPhone:text-xs font-poppins text-fontColor'>{`${month} ${date}, ${year} At ${hour}:${minute} ${ampm}`}</span>
+                    <span className='dateAndTime font-normal wideScreen:text-base largePhone:text-sm smallPhone:text-xs font-poppins text-fontColor'>{`${month} ${date}, ${year} at ${hour}:${minute} ${ampm}`}</span>
                     <p className="commentBody my-2 font-poppins wideScreen:text-xl largeTablet:text-lg largePhone:text-base smallPhone:text-sm font-normal text-fontColor">{comment.comment}</p>
                     {/* <PrimaryButton width="1/2" height="8" buttonName="Reply" /> */}
                 </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 
-const StarRating = ({ getStar }) => {
+const StarRating = ({ getStar, clearRating }) => {
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
 
@@ -9,6 +9,12 @@ const StarRating = ({ getStar }) => {
         getStar(rating);
     }, [rating, getStar]);
 
+    useEffect(()=>{
+        if(clearRating === true){
+            setRating(0);
+            setHover(0);
+        }
+    }, [clearRating]);
 
     return (
         <div className="star-rating">
