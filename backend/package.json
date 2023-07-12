@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon -r esm server.js",
-    "build": "node server.js"
+    "start": "node server.js"
   },
   "author": "ramanuj",
   "license": "ISC",
