@@ -7,6 +7,8 @@ import routes from './routes';
 import path from 'path';
 import cors from 'cors';
 
+const PORT = process.env.PORT || APP_PORT
+
 // DB Connection
 mongoose.connect(DB_URL, {
     useNewUrlParser: true,
@@ -27,4 +29,4 @@ app.use('/api', routes);
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 app.use(errorHandler)
-app.listen(APP_PORT, () => console.log(`Listening on port ${APP_PORT} ...`));
+app.listen(PORT, () => console.log(`Listening on port ${PORT} ...`));
