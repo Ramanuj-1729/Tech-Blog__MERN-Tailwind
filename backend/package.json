@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "type": "module",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "dev": "nodemon -r esm server.js",
     "start": "node server.js"
