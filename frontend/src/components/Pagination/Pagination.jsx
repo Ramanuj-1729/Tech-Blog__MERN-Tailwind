@@ -9,7 +9,7 @@ const Pagination = ({ showPerPage, onPaginationChange, posts }) => {
     useEffect(() => {
         let value = showPerPage * counter;
         onPaginationChange(value - showPerPage, value);
-    }, [counter, showPerPage])
+    }, [counter, showPerPage, onPaginationChange])
 
     const onButtonClick = (type) => {
         if (type === "prev") {

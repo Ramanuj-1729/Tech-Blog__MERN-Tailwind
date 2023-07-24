@@ -3,7 +3,7 @@ import ArticleInfo from '../ArticleInfo/ArticleInfo';
 import Undeline from '../shared/Underline/Underline';
 
 const Article = ({ post, comments }) => {
-    const PF = "http://localhost:5000/";
+    const PF = "https://tech-blog-api.up.railway.app/";
 
     return (
         <>

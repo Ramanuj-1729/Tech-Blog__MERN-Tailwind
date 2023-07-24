@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Posts = ({ start, end, posts }) => {
-    const PF = "http://localhost:5000/";
+    const PF = "https://tech-blog-api.up.railway.app/";
 
     return (
         <>
