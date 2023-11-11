@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const querySchema = new Schema({
@@ -7,4 +7,4 @@ const querySchema = new Schema({
     message: { type: String, require: true }
 }, { timestamps: true });
 
-export default mongoose.model('query', querySchema, 'queries');
+module.exports = mongoose.model('query', querySchema, 'queries');

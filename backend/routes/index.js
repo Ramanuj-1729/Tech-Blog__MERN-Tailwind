@@ -1,6 +1,6 @@
-import express from 'express';
+const express = require('express');
 const router = express.Router();
-import { categoryController, commentsAndRatingsController, postsController, queryController } from '../controllers';
+const { categoryController, commentsAndRatingsController, postsController, queryController } = require('../controllers');
 
 router.post('/posts', postsController.createPost);
 router.put('/posts/:id', postsController.updatePost);
@@ -14,4 +14,4 @@ router.get('/comments/:id', commentsAndRatingsController.getAllComments);
 router.post('/queries', queryController.createQuery);
 router.get('/queries', queryController.getAllQuery);
 
-export default router;
+module.exports = router;

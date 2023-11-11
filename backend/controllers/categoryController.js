@@ -1,5 +1,5 @@
-import Category from '../models/Category';
-import CustomErrorHandler from '../services/CustomErrorHandler';
+const Category = require('../models/Category');
+const CustomErrorHandler = require('../services/CustomErrorHandler');
 
 const categoryController = {
     // create category
@@ -28,4 +28,4 @@ const categoryController = {
     },
 }
 
-export default categoryController;
+module.exports = categoryController;

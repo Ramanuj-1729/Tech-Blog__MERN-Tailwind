@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const commentsAndRatingsSchema = new Schema({
@@ -9,4 +9,4 @@ const commentsAndRatingsSchema = new Schema({
     comment: { type: String }
 }, { timestamps: true });
 
-export default mongoose.model('comment', commentsAndRatingsSchema, 'comments');
+module.exports = mongoose.model('comment', commentsAndRatingsSchema, 'comments');

@@ -1,9 +1,9 @@
-import Joi from 'joi';
-import Posts from '../models/Posts';
-import multer from 'multer';
-import path from 'path';
-import fs from 'fs';
-import CustomErrorHandler from '../services/CustomErrorHandler';
+const Joi = require('joi');
+const Posts = require('../models/Posts');
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
+const CustomErrorHandler = require('../services/CustomErrorHandler');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => cb(null, 'uploads'), 
@@ -141,4 +141,4 @@ const postsController = {
 
 
 
-export default postsController;
+module.exports = postsController;

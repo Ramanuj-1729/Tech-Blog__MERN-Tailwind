@@ -1,7 +1,7 @@
-import Joi from 'joi';
-import CommentsAndRatings from '../models/CommentsAndRatings';
-import CustomErrorHandler from '../services/CustomErrorHandler';
-import Query from '../models/Query';
+const Joi = require('joi');
+const CommentsAndRatings = require('../models/CommentsAndRatings');
+const CustomErrorHandler = require('../services/CustomErrorHandler');
+const Query = require('../models/Query');
 
 const queryController = {
     // create query 
@@ -50,4 +50,4 @@ const queryController = {
     },
 }
 
-export default queryController;
+module.exports = queryController;

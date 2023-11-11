@@ -1,4 +1,11 @@
-export { default as Posts } from './Posts';
-export { default as Category } from './Category';
-export { default as CommentsAndRatings } from './CommentsAndRatings';
-export { default as Query } from './Query';
+const Posts = require('./Posts');
+const Category = require('./Category');
+const CommentsAndRatings = require('./CommentsAndRatings');
+const Query = require('./Query');
+
+module.exports = {
+    Posts,
+    Category,
+    CommentsAndRatings,
+    Query
+};

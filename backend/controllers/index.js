@@ -1,4 +1,12 @@
-export { default as postsController } from './postsController';
-export { default as categoryController } from './categoryController';
-export { default as commentsAndRatingsController } from './commentsAndRatingsController';
-export { default as queryController } from './queryController';
+const postsController = require('./postsController');
+const categoryController = require('./categoryController');
+const commentsAndRatingsController = require('./commentsAndRatingsController');
+const queryController = require('./queryController');
+
+module.exports = {
+    postsController,
+    categoryController,
+    commentsAndRatingsController,
+    queryController
+};
+

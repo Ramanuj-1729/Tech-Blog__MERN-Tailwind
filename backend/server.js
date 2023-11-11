@@ -1,11 +1,11 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import { APP_PORT, DB_URL } from './config';
-import errorHandler from './middlewares/errorHandler';
+const express = require('express');
+const mongoose = require('mongoose');
+const { APP_PORT, DB_URL } = require('./config');
+const errorHandler = require('./middlewares/errorHandler');
 const app = express();
-import routes from './routes';
-import path from 'path';
-import cors from 'cors';
+const routes = require('./routes');
+const path = require('path');
+const cors = require('cors');
 
 const PORT = process.env.PORT || APP_PORT
 

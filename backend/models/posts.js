@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const postsSchema = new Schema({
@@ -9,4 +9,4 @@ const postsSchema = new Schema({
     category: { type: String, required: true }
 }, { timestamps: true });
 
-export default mongoose.model('post', postsSchema, 'posts');
+module.exports = mongoose.model('post', postsSchema, 'posts');

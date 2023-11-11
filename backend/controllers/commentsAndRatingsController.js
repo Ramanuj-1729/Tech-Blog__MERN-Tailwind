@@ -1,6 +1,6 @@
-import Joi from 'joi';
-import CommentsAndRatings from '../models/CommentsAndRatings';
-import CustomErrorHandler from '../services/CustomErrorHandler';
+const Joi = require('joi');
+const CommentsAndRatings = require('../models/CommentsAndRatings');
+const CustomErrorHandler = require('../services/CustomErrorHandler');
 
 const commentsAndRatingsController = {
     // create comment 
@@ -53,4 +53,4 @@ const commentsAndRatingsController = {
     },
 }
 
-export default commentsAndRatingsController;
+module.exports = commentsAndRatingsController;
