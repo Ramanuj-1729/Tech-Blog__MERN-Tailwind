@@ -1,5 +1,5 @@
 const Joi = require('joi');
-const Posts = require('../models/Posts.js');
+const Posts = require('../models/Posts');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
