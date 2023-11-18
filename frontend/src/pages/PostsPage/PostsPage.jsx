@@ -11,7 +11,7 @@ const PostsPage = () => {
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const res = await axios.get("/api/posts/"+search);
+            const res = await axios.get("https://techblog-api-xktm.onrender.com/api/posts/"+search);
             setPosts(res.data);
         }
         fetchPosts();

@@ -18,7 +18,7 @@ const ContactForm = () => {
         };
         try {
             setLoader(true);
-            await axios.post("/api/queries", newMessage);
+            await axios.post("https://techblog-api-xktm.onrender.com/api/queries", newMessage);
             setTimeout(() => {
                 setLoader(false);
                 window.location.reload();
