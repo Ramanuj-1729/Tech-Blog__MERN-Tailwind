@@ -11,7 +11,7 @@ const HomePage = () => {
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const res = await axios.get("https://techblog-api-xktm.onrender.com/api/posts/");
+            const res = await axios.get("http://ecocart.ap-1.evennode.com/api/posts/");
             setPosts(res.data);
         }
         fetchPosts();

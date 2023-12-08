@@ -17,7 +17,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const fetchCategories = async () => {
-            const res = await axios.get('https://techblog-api-xktm.onrender.com/api/categories');
+            const res = await axios.get('http://ecocart.ap-1.evennode.com/api/categories');
             setCategories(res.data);
         }
         fetchCategories();

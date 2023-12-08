@@ -9,17 +9,15 @@ const cors = require('cors');
 
 const PORT = process.env.PORT || APP_PORT
 
-// DB Connection
+//DB connection
 mongoose.connect(DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', () => {
-    console.log('DB connected...');
-});
+db.on('error', console.error.bind(console, 'Connection error:'));
+db.once('open', () => console.log('DB connected ...'));
 
 global.appRoot = path.resolve(__dirname);
 const corsOptions = {

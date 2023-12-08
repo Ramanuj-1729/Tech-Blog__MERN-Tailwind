@@ -1,9 +1,9 @@
 const Joi = require('joi');
+const Posts = require('../models/Posts');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const CustomErrorHandler = require('../services/CustomErrorHandler');
-const Posts = require('../models/Posts');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => cb(null, 'uploads'), 
@@ -52,7 +52,7 @@ const postsController = {
 
             try {
                 postsDocument = await Posts.create({
-                    thumbnail: filePath,
+                    thumbnail: `https://techblog-api-xktm.onrender.com/${filePath}`,
                     userName,
                     title,
                     body,

@@ -15,11 +15,11 @@ const SingleArticlePage = () => {
 
     useEffect(() => {
         const getPost = async () => {
-            const res = await axios.get("https://techblog-api-xktm.onrender.com/api/posts/" + path);
+            const res = await axios.get("http://ecocart.ap-1.evennode.com/api/posts/" + path);
             setPost(res.data);
         }
         const getCommentAndRating = async () => {
-            const res = await axios.get("https://techblog-api-xktm.onrender.com/api/comments/" + path);
+            const res = await axios.get("http://ecocart.ap-1.evennode.com/api/comments/" + path);
             setComments(res.data);
         }
         getPost();
