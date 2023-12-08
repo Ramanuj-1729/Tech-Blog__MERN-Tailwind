@@ -29,7 +29,7 @@ const CommentAndRate = ({ postId }) => {
         };
         try {
             setLoader(true);
-            await axios.post("http://ecocart.ap-1.evennode.com/api/comments", newComment);
+            await axios.post("https://techblog-api-xktm.onrender.com/api/comments", newComment);
             setLoader(false);
             setRating(0);
             setUserName("");
