@@ -21,7 +21,7 @@ db.once('open', () => console.log('DB connected ...'));
 
 global.appRoot = path.resolve(__dirname);
 const corsOptions = {
-    origin: 'https://techblogger.vercel.app/',
+    origin: 'https://techblogger.vercel.app',
     credentials: true,
     optionSuccessStatus: 200
 }
